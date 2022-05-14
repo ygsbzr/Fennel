@@ -454,6 +454,8 @@ namespace Fennel
                 }
             }
             orig(self, hitInstance);
+            if (self.hp <= 0)
+                StartCoroutine(DelayedDeath());
         }
 
         IEnumerator MusicControl()
